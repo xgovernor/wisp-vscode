@@ -1,0 +1,114 @@
+{
+  "Variable Declaration": {
+    "prefix": "let",
+    "body": [
+      "let ${1:name}(${2:type}) is ${3:value};"
+    ],
+    "description": "Declare a variable with type and value"
+  },
+  "Constant Declaration": {
+    "prefix": "constant",
+    "body": [
+      "constant ${1:name}(${2:type}) is ${3:value};"
+    ],
+    "description": "Declare a constant with type and value"
+  },
+  "Show Statement": {
+    "prefix": "show",
+    "body": [
+      "show `${1:message}`;"
+    ],
+    "description": "Show/print a message"
+  },
+  "If-Else Statement": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}:\n    ${2:statements};\nelse:\n    ${3:statements};"
+    ],
+    "description": "If-Else statement (English-like)"
+  },
+  "While Loop": {
+    "prefix": "while",
+    "body": [
+      "while ${1:condition}:\n    ${2:statements};"
+    ],
+    "description": "While loop (English-like)"
+  },
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for ${1:var} is ${2:start}; ${1} less than ${3:end}; ${1} post increase by 1:\n    ${4:statements};"
+    ],
+    "description": "For loop (English-like)"
+  },
+  "Do While Loop": {
+    "prefix": "do",
+    "body": [
+      "do:\n    ${1:statements};\nwhile ${2:condition};"
+    ],
+    "description": "Do...while loop (English-like)"
+  },
+  "Ask Input": {
+    "prefix": "ask",
+    "body": [
+      "ask \"${1:question}\" as ${2:var}(${3:type});"
+    ],
+    "description": "Prompt user for input"
+  },
+  "Array Declaration": {
+    "prefix": "array",
+    "body": [
+      "let ${1:name}(array) is [${2:values}];"
+    ],
+    "description": "Declare an array"
+  },
+  "Object Declaration": {
+    "prefix": "object",
+    "body": [
+      "let ${1:name}(object) is { ${2:key}: ${3:value} };"
+    ],
+    "description": "Declare an object"
+  },
+  "Read File": {
+    "prefix": "read_file",
+    "body": [
+      "let ${1:var}(string);\n${1:var} is read_file(\"${2:filename}\");"
+    ],
+    "description": "Read file contents"
+  },
+  "Write File": {
+    "prefix": "write_file",
+    "body": [
+      "write_file(\"${1:filename}\", ${2:content});"
+    ],
+    "description": "Write to a file"
+  },
+  "Function Definition": {
+    "prefix": "function",
+    "body": [
+      "let function ${1:name} takes ${2:args} returns (${3:type}):\n    ${4:statements};"
+    ],
+    "description": "Function definition (English-like)"
+  },
+  "Try Catch": {
+    "prefix": "try",
+    "body": [
+      "try:\n    ${1:statements};\ncatch ${2:error}:\n    ${3:handler};"
+    ],
+    "description": "Try-catch error handling"
+  },
+  "Async Function": {
+    "prefix": "async",
+    "body": [
+      "async function ${1:name}(${2:args}):\n    ${3:statements};"
+    ],
+    "description": "Async function definition"
+  },
+  "Spawn": {
+    "prefix": "spawn",
+    "body": [
+      "let ${1:task} is spawn ${2:function}(${3:args});"
+    ],
+    "description": "Spawn a concurrent task"
+  }
+}

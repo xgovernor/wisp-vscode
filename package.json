@@ -1,0 +1,48 @@
+{
+  "name": "wisp-language-support",
+  "displayName": "Wisp Language Support",
+  "description": "Syntax highlighting, snippets, and basic language support for the Wisp programming language.",
+  "version": "0.2.3",
+  "publisher": "Abu Taher Muhammad <https://github.com/xgovernor>",
+  "engines": {
+    "vscode": ">=1.70.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "wisp",
+        "aliases": ["Wisp", "wisp"],
+        "extensions": [".wisp"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "wisp",
+        "scopeName": "source.wisp",
+        "path": "./syntaxes/wisp.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "wisp",
+        "path": "./snippets/wisp.json"
+      }
+    ]
+  },
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xgovernor/wisp-vscode"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^2.2.0",
+    "mocha": "^10.0.0",
+    "glob": "^10.0.0"
+  }
+}
