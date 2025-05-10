@@ -1,19 +1,26 @@
 {
-  "name": "wisp-language-support",
-  "displayName": "Wisp Language Support",
+  "name": "wisp",
+  "displayName": "Wisp",
   "description": "Syntax highlighting, snippets, and basic language support for the Wisp programming language.",
   "version": "0.2.3",
-  "publisher": "Abu Taher Muhammad <https://github.com/xgovernor>",
+  "publisher": "AT-mAh",
   "engines": {
     "vscode": ">=1.70.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
   "contributes": {
     "languages": [
       {
         "id": "wisp",
-        "aliases": ["Wisp", "wisp"],
-        "extensions": [".wisp"],
+        "aliases": [
+          "Wisp",
+          "wisp"
+        ],
+        "extensions": [
+          ".wisp"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -39,11 +46,18 @@
   "license": "MIT",
   "scripts": {
     "test": "node ./test/runTest.js",
-    "lint": "pnpm node linter.js"
+    "lint": "pnpm node src/linter.js"
   },
   "devDependencies": {
     "@vscode/test-electron": "^2.2.0",
+    "glob": "^10.0.0",
     "mocha": "^10.0.0",
-    "glob": "^10.0.0"
+    "@vscode/vsce": "^3.3.2"
+  },
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:wisp"
+  ],
+  "dependencies": {
   }
 }

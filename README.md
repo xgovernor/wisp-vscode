@@ -30,6 +30,11 @@ The extension uses a TextMate grammar for highlighting:
 - Comments (`#` and `//`)
 - Numbers, constants, and identifiers
 
+## Linter
+
+Type `pnpm run lint` to check your `.wisp` files for syntax errors and style issues.
+The linter logic is now located in `src/linter.js` for both CLI and real-time diagnostics.
+
 ## Snippets
 
 Type prefixes like `let`, `constant`, `show`, `if`, `while`, `for`, `do`, `ask`, `array`, `object`, `read_file`, `write_file`, `function`, `try`, `async`, or `spawn` for code templates.

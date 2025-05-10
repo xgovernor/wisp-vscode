@@ -1,0 +1,10 @@
+# Exclude dev/test/config files from the VSIX package
+.git*
+README.md
+pnpm-lock.yaml
+pnpm-workspace.yaml
+test/
+.vscode/
+*.log
+*.vsix
+LICENSE*
