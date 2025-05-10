@@ -38,7 +38,8 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "lint": "pnpm node linter.js"
   },
   "devDependencies": {
     "@vscode/test-electron": "^2.2.0",
